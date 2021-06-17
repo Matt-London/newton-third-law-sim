@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="input">
+            <div class="label" id="input-label">Input</div>
+            <div id="reading-container">
+                <div id="reading">0 N</div>
+            </div>
+            <div id="force-input-container">
+                <textarea name="force-input" id="force-input"></textarea>
+            </div>
+            <input id="force-slider" type="range" min="0" max="1000" value="0">
+            <div id="slider-scale-left">0</div>
+            <div id="slider-scale-right">100</div>
+        </div>
+
+        <div id="output">
+            <div class="label" id="output-label">Output</div>
+
+            <div id="measure-container">
+                <div class="scale" id="scale1">0 N</div>
+                <div id="scale-separator"></div>
+                <div class="scale" id="scale2">0 N</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

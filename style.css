@@ -1,0 +1,152 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#container {
+    position: absolute;
+    height: 400px;
+    width: 1000px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid black 2px;
+}
+
+#input {
+    border: solid black 2px;
+    height: 400px;
+    transform: translate(-1px, -1px);
+    width: 300px;
+
+}
+
+.label {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+#reading-container {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#reading {
+    position: relative;
+    top: 25%;
+    width: 75%;
+    padding-top: 10px;
+    border-radius: 1rem;
+    height: 50%;
+    background-color: rgba(0, 0, 255, 0.267);
+    text-align: center;
+    font-size: 40px;
+}
+
+#force-input-container {
+    height: 10%;
+    width: 100%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+#force-input {
+    outline: none;
+    resize: none;
+    width: 75%;
+    border-radius: 0.5rem;
+    border-color: rgba(0, 0, 255, 0.267);
+    padding-top: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#force-slider {
+    position: relative;
+    -webkit-appearance: none;
+    left: 12.5%;
+    top: 10%;
+    width: 75%;
+    background: rgba(0, 0, 255, 0.164);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    
+}
+
+#force-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: rgba(0, 0, 255, 0.267);
+    cursor: pointer;
+}
+
+#force-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(0, 0, 255, 0.267);
+    cursor: pointer;
+  }
+
+#slider-scale-left {
+    position: relative;
+    font-size: 20px;
+    top: 10%;
+    left: 13%;
+}
+
+#slider-scale-right {
+    position: relative;
+    font-size: 20px;
+    top: 4.5%;
+    left: 82%;
+}
+
+#output {
+    position: absolute;
+    top: 50%;
+    left: 301px;
+    transform: translate(2px, calc(-50%));
+    height: 401px;
+    width: 698px;
+}
+
+#measure-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5%;
+    height: 42%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scale {
+    background-color: rgba(10, 51, 126, 0.75);
+    border-radius: 1rem;
+    height: 100%;
+    width: 40%;
+    float: left;
+}
+
+#scale-separator {
+    height: 100%;
+    width: 15%;
+    float: left;
+}
+
