@@ -1,16 +1,16 @@
 const forceSlider = document.getElementById("force-slider");
 const forceReading = document.getElementById("reading");
 const forceInputText = document.getElementById("force-input");
-const scale1 = document.getElementById("scale1");
-const scale2 = document.getElementById("scale2");
+const scaleReadings = document.getElementsByClassName("scale-reading");
 
 var force = 0.1;
 
-
 // Sets both scales to the force that was inputted
 function set_scales() {
-    scale1.innerText = force + " N";
-    scale2.innerText = force + " N";
+    // Set all values with scale-reading class
+    Array.prototype.forEach.call(scaleReadings, (scale) => {
+        scale.innerText = force + " N";
+    });
 }
 
 // Updates the slider and textbox as well as reading
@@ -40,8 +40,6 @@ forceInputText.addEventListener('input', (event) => {
     
     forceSlider.value = force * 10;
 
-    set_scales();
-
 });
 
 forceSlider.addEventListener('input', (event) => {
@@ -51,6 +49,9 @@ forceSlider.addEventListener('input', (event) => {
 
     forceInputText.value = force;
 
-    set_scales();
-
 });
+
+
+// Update the scale reading
+forceInputText.addEventListener('input', set_scales);
+forceSlider.addEventListener('change', set_scales);

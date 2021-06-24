@@ -10,31 +10,72 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="container">
-        <div id="input">
-            <div class="label" id="input-label">Input</div>
-            <div id="reading-container">
-                <div id="reading">0 N</div>
+    <div id="whole-body">
+        <div id="container">
+            <div id="input">
+                <div class="label" id="input-label">Input</div>
+                <div id="reading-container">
+                    <div id="reading">0 N</div>
+                </div>
+                <div id="force-input-container">
+                    <textarea name="force-input" id="force-input">0</textarea>
+                </div>
+                <input id="force-slider" type="range" min="0" max="1000" value="0">
+                <div id="slider-scale-left">0 N</div>
+                <div id="slider-scale-right">100 N</div>
             </div>
-            <div id="force-input-container">
-                <textarea name="force-input" id="force-input"></textarea>
+
+            <div id="output">
+                <div class="label" id="output-label">Output</div>
+
+                <div id="measure-container">
+                    <div class="scale" id="scale1">
+                        <div class="scale-label">Force:</div>
+                        <div class="scale-reading">0 N</div>
+
+                    </div>
+                    <div id="scale-separator"></div>
+                    <div class="scale" id="scale2">
+                        <div class="scale-label">Force:</div>
+                        <div class="scale-reading">0 N</div>
+                    </div>
+
+                </div>
+
+                
+                <div id="rendering">
+                    <div id="anchor"></div>
+                    <div id="base"></div>
+                    <div id="render1" class="scale-render">
+                        <!-- Image from https://thenounproject.com/term/spring-scale/3471/ -->
+                        <img class="scale-img" src="./images/scaleDrawing.png" alt="Image of a cartoon scale">
+                        <div class="scale-window"></div>
+                    </div>
+
+                    <div id="render2" class="scale-render">
+                        <!-- Image from https://thenounproject.com/term/spring-scale/3471/ -->
+                        <img class="scale-img" src="./images/scaleDrawing.png" alt="Image of a cartoon scale">
+                        <div class="scale-window"></div>
+                    </div>
+
+                    <!-- Image from https://commons.wikimedia.org/wiki/File:Stick-figure-pull.svg -->
+                    <img id="stick-pull" src="./images/stick-pull.png" alt="Stick figure pulling something">
+                    
+                    <!-- Relation arrows -->
+                    <div id="arrow1" class="arrow">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-base"></div>
+                    </div>
+                    <div id="arrow2" class="arrow">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-base"></div>
+                    </div>
+
+
+                </div>
             </div>
-            <input id="force-slider" type="range" min="0" max="1000" value="0">
-            <div id="slider-scale-left">0</div>
-            <div id="slider-scale-right">100</div>
+
         </div>
-
-        <div id="output">
-            <div class="label" id="output-label">Output</div>
-
-            <div id="measure-container">
-                <div class="scale" id="scale1">0 N</div>
-                <div id="scale-separator"></div>
-                <div class="scale" id="scale2">0 N</div>
-
-            </div>
-        </div>
-
     </div>
 </body>
 </html>

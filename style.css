@@ -3,7 +3,12 @@
     margin: 0%;
 }
 
-body {
+html {
+    background-color: white;
+}
+
+#whole-body {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -107,14 +112,14 @@ body {
     position: relative;
     font-size: 20px;
     top: 10%;
-    left: 13%;
+    left: 10%;
 }
 
 #slider-scale-right {
     position: relative;
     font-size: 20px;
     top: 4.5%;
-    left: 82%;
+    left: 80%;
 }
 
 #output {
@@ -146,7 +151,141 @@ body {
 
 #scale-separator {
     height: 100%;
-    width: 15%;
+    width: 10%;
     float: left;
 }
 
+.scale-label {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 5px;
+    
+}
+
+.scale-reading {
+    position: relative;
+    background-color: rgba(10, 51, 126, 0.267);
+    text-align: center;
+    width: 75%;
+    left: 12.5%;
+    height: 50px;
+    top: 10%;
+    padding-top: 1%;
+    font-size: 40px;
+    border: 2px solid black;
+}
+
+#rendering {
+    position: relative;
+    border: 2px solid black;
+    top: 10%;
+    left: -2px;
+    height: 38%;
+    padding-left: 15%;
+    width: calc(85% - 1px);
+}
+
+#anchor {
+    position: relative;
+    background-color: black;
+    height: 75%;
+    width: 2%;
+    border-radius: 1rem;
+    left: 10%;
+    top: 12.5%;
+}
+
+#base {
+    position: relative;
+    background-color: black;
+    height: 7%;
+    width: 10%;
+    left: 6%;
+    top: 6%;
+    border-radius: 1rem;
+    z-index: 0;
+}
+
+.scale-render {
+    position: relative;
+    height: 50px;
+    width: 152px;
+    left: 50%;
+    top: -20%;
+}
+
+.scale-img {
+    height: 48px;
+    width: 150px;
+}
+
+.scale-window {
+    position: relative;
+    top: -80%;
+    left: 52%;
+    background-color: white;
+    height: 27px;
+    width: 40px;
+}
+
+#render1 {
+    position: relative;
+    left: 9.5%;
+    top: -50%;
+    float: left;
+}
+
+#render2 {
+    position: relative;
+    left: 7.5%;
+    top: -50%;
+    float: left;
+}
+
+#stick-pull {
+    position: relative;
+    top: -60%;
+    left: 1%;
+    height: 100px;
+    width: auto;
+    z-index: -1;
+}
+
+.arrow {
+    width: 50px;
+}
+
+.arrow-base {
+    position: relative;
+    background-color: rgb(42, 94, 42);
+    height: 150px;
+    width: 12px;
+    left: 13.5%;
+    margin-top: -2%;
+
+}
+
+/* Credit to https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-head {
+    height: 0;
+    width: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(42, 94, 42);
+}
+
+#arrow1 {
+    position: absolute;
+    top: -60%;
+    left: 33%;
+    transform: rotate(-10deg);
+}
+
+
+#arrow2 {
+    position: absolute;
+    top: -60%;
+    left: 58%;
+    transform: rotate(10deg);
+}
