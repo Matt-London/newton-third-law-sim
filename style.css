@@ -7,6 +7,20 @@ html {
     background-color: #8ecae6;
 }
 
+#banner {
+    position: absolute;
+    background-color: #44778fc4;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    top: 5%;
+    left: 25%;
+
+
+
+}
+
 #whole-body {
     background-color: white;
     display: flex;
@@ -301,4 +315,13 @@ html {
     position: absolute;
     top: -58%;
     left: 56%;
+}
+
+#credit {
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    right: 1%;
+    font-size: 20px;
+    font-weight: bold;
 }
