@@ -4,7 +4,7 @@
 }
 
 html {
-    background-color: white;
+    background-color: #8ecae6;
 }
 
 #whole-body {
@@ -20,11 +20,11 @@ html {
     width: 1000px;
     top: 50%;
     transform: translateY(-50%);
-    border: solid black 2px;
+    border: solid #023047 2px;
 }
 
 #input {
-    border: solid black 2px;
+    border: solid #023047 2px;
     height: 400px;
     transform: translate(-1px, -1px);
     width: 300px;
@@ -52,7 +52,7 @@ html {
     padding-top: 10px;
     border-radius: 1rem;
     height: 50%;
-    background-color: rgba(0, 0, 255, 0.267);
+    background-color: #219ebc;
     text-align: center;
     font-size: 40px;
 }
@@ -70,7 +70,7 @@ html {
     resize: none;
     width: 75%;
     border-radius: 0.5rem;
-    border-color: rgba(0, 0, 255, 0.267);
+    border-color: #023047;
     padding-top: 5px;
     font-size: 20px;
     text-align: center;
@@ -82,7 +82,7 @@ html {
     left: 12.5%;
     top: 10%;
     width: 75%;
-    background: rgba(0, 0, 255, 0.164);
+    background: #219dbc4d;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -96,7 +96,7 @@ html {
     width: 25px;
     height: 25px;
     border-radius: 50%; 
-    background: rgba(0, 0, 255, 0.267);
+    background: #1aa7ca;
     cursor: pointer;
 }
 
@@ -142,7 +142,7 @@ html {
 }
 
 .scale {
-    background-color: rgba(10, 51, 126, 0.75);
+    background-color: #219ebc;
     border-radius: 1rem;
     height: 100%;
     width: 40%;
@@ -173,12 +173,12 @@ html {
     top: 10%;
     padding-top: 1%;
     font-size: 40px;
-    border: 2px solid black;
+    border: 2px solid #023047;
 }
 
 #rendering {
     position: relative;
-    border: 2px solid black;
+    border: 2px solid #023047;
     top: 10%;
     left: -2px;
     height: 38%;
@@ -192,7 +192,7 @@ html {
     height: 75%;
     width: 2%;
     border-radius: 1rem;
-    left: 10%;
+    left: -10%;
     top: 12.5%;
 }
 
@@ -201,7 +201,7 @@ html {
     background-color: black;
     height: 7%;
     width: 10%;
-    left: 6%;
+    left: -14%;
     top: 6%;
     border-radius: 1rem;
     z-index: 0;
@@ -211,7 +211,7 @@ html {
     position: relative;
     height: 50px;
     width: 152px;
-    left: 50%;
+    left: -10%;
     top: -20%;
 }
 
@@ -220,13 +220,37 @@ html {
     width: 150px;
 }
 
-.scale-window {
+.scale-left {
     position: relative;
-    top: -80%;
-    left: 52%;
-    background-color: white;
-    height: 27px;
-    width: 40px;
+    left: -82%;
+}
+
+.scale-right {
+    position: relative;
+    top: -135%;
+}
+
+#scale1-right {
+    position: relative;
+    left: -82%;
+}
+
+#scale2-left {
+    position: relative;
+    left: -50%;
+}
+
+#scale2-right {
+    position: relative;
+    left: -50%;
+}
+
+#stick-pull {
+    position: relative;
+    top: -54%;
+    left: -5%;
+    height: 100px;
+    width: auto;
 }
 
 #render1 {
@@ -243,25 +267,16 @@ html {
     float: left;
 }
 
-#stick-pull {
-    position: relative;
-    top: -60%;
-    left: 1%;
-    height: 100px;
-    width: auto;
-    z-index: -1;
-}
-
 .arrow {
     width: 50px;
 }
 
 .arrow-base {
     position: relative;
-    background-color: rgb(42, 94, 42);
-    height: 150px;
-    width: 12px;
-    left: 13.5%;
+    background-color: #356075;
+    height: 160px;
+    width: 8px;
+    left: 12%;
     margin-top: -2%;
 
 }
@@ -270,22 +285,20 @@ html {
 .arrow-head {
     height: 0;
     width: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid rgb(42, 94, 42);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #356075;
 }
 
 #arrow1 {
     position: absolute;
-    top: -60%;
-    left: 33%;
-    transform: rotate(-10deg);
+    top: -58%;
+    left: 10%;
 }
 
 
 #arrow2 {
     position: absolute;
-    top: -60%;
-    left: 58%;
-    transform: rotate(10deg);
+    top: -58%;
+    left: 56%;
 }

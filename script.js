@@ -3,6 +3,12 @@ const forceReading = document.getElementById("reading");
 const forceInputText = document.getElementById("force-input");
 const scaleReadings = document.getElementsByClassName("scale-reading");
 
+// For render
+const scale1right = document.getElementById("scale1-right");
+const scale2left = document.getElementById("scale2-left");
+const scale2right = document.getElementById("scale2-right");
+const stickPull = document.getElementById("stick-pull");
+
 var force = 0.1;
 
 // Sets both scales to the force that was inputted
@@ -14,6 +20,29 @@ function set_scales() {
     // Set 1 to dyne
     scaleReadings[1].innerText = force + "e5 dyn";
 
+}
+
+// Updates render depending on force
+// PLEASE look away for this function haha!
+function render() {
+    /*
+    * var: 0%, 100%
+    * scale1right: -82%, -32%
+    * scale2left: -50%, -2%
+    * scale2right: -50%, 48%
+    * stickPull: -5%, 20%
+    */ 
+    scale1right.style.left = (-82 + (82 - 32) * (force / 100)) + "%";
+    scale2left.style.left = (-50 + (50 - 2) * (force / 100)) + "%";
+    scale2right.style.left = (-50 + (50 + 48) * (force / 100)) + "%";
+    stickPull.style.left = (-5 + (5 + 20) * (force / 100)) + "%";
+
+}
+
+// Runs both update functions
+function update() {
+    set_scales();
+    render();
 }
 
 // Updates the slider and textbox as well as reading
@@ -56,5 +85,5 @@ forceSlider.addEventListener('input', (event) => {
 
 
 // Update the scale reading
-forceInputText.addEventListener('input', set_scales);
-forceSlider.addEventListener('change', set_scales);
+forceInputText.addEventListener('input', update);
+forceSlider.addEventListener('change', update);
