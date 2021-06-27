@@ -8,9 +8,12 @@ var force = 0.1;
 // Sets both scales to the force that was inputted
 function set_scales() {
     // Set all values with scale-reading class
-    Array.prototype.forEach.call(scaleReadings, (scale) => {
-        scale.innerText = force + " N";
-    });
+    // Set 0 to newton
+    scaleReadings[0].innerText = force + " N";
+
+    // Set 1 to dyne
+    scaleReadings[1].innerText = force + "e5 dyn";
+
 }
 
 // Updates the slider and textbox as well as reading
