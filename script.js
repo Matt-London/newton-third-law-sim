@@ -18,7 +18,15 @@ function set_scales() {
     scaleReadings[0].innerText = force + " N";
 
     // Set 1 to dyne
-    scaleReadings[1].innerText = force + "e5 dyn";
+    if (force == 0) {
+        scaleReadings[1].innerText = "0 dyn";
+    }
+    else {
+        let magnitude = Math.floor(Math.log10(force));
+
+        // Check whether to do scientific notation or not
+            scaleReadings[1].innerText = (force / 10 ** magnitude).toFixed(2) + "e" + (5 + magnitude) + " dyn";
+    }
 
 }
 
@@ -61,6 +69,11 @@ forceInputText.addEventListener('input', (event) => {
     }
 
     force = parseFloat(forceInputText.value);
+
+    if (force > 100) {
+        force = 100;
+        forceInputText.value = 100;
+    }
 
     if (!isNaN(force) || forceInputText.value) {
         forceReading.innerText = force + " N";
